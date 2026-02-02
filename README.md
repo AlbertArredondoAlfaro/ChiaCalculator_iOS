@@ -1,2 +1,2 @@
-# ChiaCalculator_iOS
+# ChiaCalculator iOS
 Chia Calculator iOS App
