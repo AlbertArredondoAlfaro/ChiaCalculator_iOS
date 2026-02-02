@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08D429328112AD078993E0A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */; };
+		10AF62D5BE7E05ED7E66928A /* ChiaCalculator.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */; };
+		213C355914DD36FC985EF50A /* ChiaCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */; };
+		2A7D37B560017A4533422FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */; };
+		4419D37D3FC9D83BC0E3F697 /* ChiaFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */; };
+		536EB786F7713933ABFA5A64 /* PoolStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */; };
+		57F12953711FA6D1BD36F423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */; };
+		8B5E9C0161E9895A0A030B4F /* ChiaCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */; };
+		92868E09A1840BC5B5A6CA1D /* DerivedResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7E64389C8D2089CB5424D /* DerivedResponses.swift */; };
+		C65D74E12873B8ABAE25075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		42B7E64389C8D2089CB5424D /* DerivedResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivedResponses.swift; sourceTree = "<group>"; };
+		7DE067B83D3836070FF756A3 /* ChiaCalculator.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ChiaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolStatsResponse.swift; sourceTree = "<group>"; };
+		"TEMP_292DDE94-B02B-41CD-B46A-47F2AA0312DD" /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		"TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		"TEMP_4CAAC7EC-FB41-4D21-BBEB-68B77C4FAFEC" /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		"TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ChiaCalculator.xcodeproj; sourceTree = "<group>"; };
+		"TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaFormatters.swift; sourceTree = "<group>"; };
+		"TEMP_847627CA-E46E-417D-A7AF-7EFBA84C66D2" /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		"TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		"TEMP_94639ADE-ED20-4938-B515-0977B9E360BB" /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		"TEMP_AC4A28D4-795C-4669-9CF9-3EE6EB99A87F" /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		"TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		"TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorApp.swift; sourceTree = "<group>"; };
+		"TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		07038A532F315B5700E127E2 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				"TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */,
+				"TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */,
+				"TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */,
+				"TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */,
+				"TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */,
+				"TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */,
+				"TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */,
+				"TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		07038A542F315B5700E127E2 /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3C57DC1DC3442DB281692457 = {
+			isa = PBXGroup;
+			children = (
+				9C39837F063D4E7753285176 /* Models */,
+				6A8DF811FE4CC4BC8B9B7499 /* Products */,
+				07038A532F315B5700E127E2 /* Recovered References */,
+			);
+			sourceTree = "<group>";
+		};
+		6A8DF811FE4CC4BC8B9B7499 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DE067B83D3836070FF756A3 /* ChiaCalculator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C39837F063D4E7753285176 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42B7E64389C8D2089CB5424D /* DerivedResponses.swift */,
+				DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9F9E256E313E405936D80A8 /* ChiaCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3A4D7420BCBFCF99D4B7182 /* Build configuration list for PBXNativeTarget "ChiaCalculator" */;
+			buildPhases = (
+				495D372C5A150A10B19C9B99 /* Sources */,
+				03D24CE6E062A07CCB55FF43 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChiaCalculator;
+			packageProductDependencies = (
+			);
+			productName = ChiaCalculator;
+			productReference = 7DE067B83D3836070FF756A3 /* ChiaCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5F9C98BC058D6C35CE9C2829 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A9F9E256E313E405936D80A8 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 5B53DDAA141AD715AAFC3333 /* Build configuration list for PBXProject "ChiaCalculator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				ca,
+				de,
+				en,
+				es,
+				fr,
+			);
+			mainGroup = 3C57DC1DC3442DB281692457;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 07038A542F315B5700E127E2 /* Products */;
+					ProjectRef = "TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				A9F9E256E313E405936D80A8 /* ChiaCalculator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03D24CE6E062A07CCB55FF43 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C65D74E12873B8ABAE25075A /* Assets.xcassets in Resources */,
+				10AF62D5BE7E05ED7E66928A /* ChiaCalculator.xcodeproj in Resources */,
+				08D429328112AD078993E0A2 /* Localizable.strings in Resources */,
+				57F12953711FA6D1BD36F423 /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		495D372C5A150A10B19C9B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				213C355914DD36FC985EF50A /* ChiaCalculatorApp.swift in Sources */,
+				8B5E9C0161E9895A0A030B4F /* ChiaCalculatorViewModel.swift in Sources */,
+				4419D37D3FC9D83BC0E3F697 /* ChiaFormatters.swift in Sources */,
+				2A7D37B560017A4533422FFD /* ContentView.swift in Sources */,
+				92868E09A1840BC5B5A6CA1D /* DerivedResponses.swift in Sources */,
+				536EB786F7713933ABFA5A64 /* PoolStatsResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		"TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				"TEMP_4CAAC7EC-FB41-4D21-BBEB-68B77C4FAFEC" /* de */,
+				"TEMP_847627CA-E46E-417D-A7AF-7EFBA84C66D2" /* en */,
+				"TEMP_292DDE94-B02B-41CD-B46A-47F2AA0312DD" /* es */,
+				"TEMP_94639ADE-ED20-4938-B515-0977B9E360BB" /* fr */,
+				"TEMP_AC4A28D4-795C-4669-9CF9-3EE6EB99A87F" /* ca */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		03BBE3931B1AC1635C9062E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chia Calculator";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.chiacalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		099331D2164BC2BFEA698BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Chia Calculator";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.chiacalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4917048405E1663A5DD50873 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D15183A8C5D0F6BAADCFCC15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B53DDAA141AD715AAFC3333 /* Build configuration list for PBXProject "ChiaCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				099331D2164BC2BFEA698BC7 /* Debug */,
+				03BBE3931B1AC1635C9062E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3A4D7420BCBFCF99D4B7182 /* Build configuration list for PBXNativeTarget "ChiaCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D15183A8C5D0F6BAADCFCC15 /* Debug */,
+				4917048405E1663A5DD50873 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5F9C98BC058D6C35CE9C2829 /* Project object */;
+}
