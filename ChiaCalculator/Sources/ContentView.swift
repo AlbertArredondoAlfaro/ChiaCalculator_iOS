@@ -7,6 +7,8 @@ struct ContentView: View {
     @State private var sliderValue: Double = 0
     @State private var refreshTapCount = 0
     @State private var refreshSpinAngle: Double = 0
+    @State private var isSliderEditing = false
+    @State private var plotUpdateFromSlider = false
     @FocusState private var isPlotFieldFocused: Bool
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.colorScheme) private var colorScheme
@@ -32,6 +34,7 @@ struct ContentView: View {
                 .animation(reduceMotion ? .none : .easeOut(duration: 0.6), value: hasAppeared)
             }
             .scrollDismissesKeyboard(.interactively)
+            .scrollIndicators(.hidden)
         }
         .contentShape(Rectangle())
         .onTapGesture {
@@ -41,9 +44,6 @@ struct ContentView: View {
             hasAppeared = true
             sliderValue = sliderPosition(for: model.plotCount)
             await model.loadIfNeeded()
-        }
-        .onChange(of: model.plotCount) {
-            sliderValue = sliderPosition(for: model.plotCount)
         }
         .onChange(of: model.errorMessage) {
             showError = model.errorMessage != nil
@@ -116,9 +116,12 @@ struct ContentView: View {
                         get: { sliderValue },
                         set: { newValue in
                             sliderValue = newValue
+                            plotUpdateFromSlider = true
                             model.plotCount = plotsForSlider(newValue)
                         }
-                    ), in: 0...1)
+                    ), in: 0...1, onEditingChanged: { editing in
+                        isSliderEditing = editing
+                    })
                     .tint(Theme.accent)
                     .sensoryFeedback(.selection, trigger: model.plotCount)
 
@@ -128,12 +131,23 @@ struct ContentView: View {
                         .frame(width: 90)
                         .accessibilityLabel(String(localized: "plots_label"))
                         .focused($isPlotFieldFocused)
+                        .onChange(of: model.plotCount) {
+                            guard !isSliderEditing, !plotUpdateFromSlider else { return }
+                            sliderValue = sliderPosition(for: model.plotCount)
+                        }
 
                     StepperControl(
                         onDecrease: { adjustPlots(by: -10) },
                         onIncrease: { adjustPlots(by: 10) }
                     )
                 }
+                .padding(.vertical, 6)
+                .padding(.horizontal, 8)
+                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        .strokeBorder(Color.white.opacity(0.08), lineWidth: 1)
+                )
 
                 HStack(spacing: 12) {
                     Picker(String(localized: "k_size_label"), selection: $model.selectedKSize) {
