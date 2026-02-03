@@ -77,7 +77,7 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 12) {
                 HStack(alignment: .top) {
                     Text(String(localized: "app_title"))
-                        .font(.system(size: 34, weight: .heavy, design: .rounded))
+                        .font(.system(size: 33, weight: .bold, design: .rounded))
                         .foregroundStyle(.primary)
                         .shadow(color: Theme.glow.opacity(0.35), radius: 12, x: 0, y: 6)
                     Spacer()
@@ -85,23 +85,19 @@ struct ContentView: View {
                 }
 
                 Text(String(localized: "hero_subtitle"))
-                    .font(.system(size: 15, weight: .semibold, design: .rounded))
+                    .font(.system(size: 15, weight: .medium, design: .rounded))
                     .foregroundStyle(.secondary)
 
-                HStack(alignment: .bottom, spacing: 0) {
+                HStack(alignment: .bottom, spacing: 12) {
                     HeroChip(title: String(localized: "owned_space_label"), value: ownedSpaceText)
                         .frame(maxWidth: .infinity)
-                    Divider()
-                        .frame(height: 34)
-                        .background(Color.white.opacity(0.2))
+                        .layoutPriority(1)
                     HeroChip(title: String(localized: "xch_price_label"), value: priceOrPlaceholder)
                         .frame(maxWidth: .infinity)
+                        .layoutPriority(1)
                 }
-                .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
-                )
+                .frame(height: 64)
+                .frame(maxWidth: .infinity)
             }
         }
         .overlay(HeroMesh(), alignment: .topTrailing)
@@ -243,13 +239,13 @@ struct ContentView: View {
 
     private var ownedSpaceText: String {
         let formatter = ChiaFormatters.bytesFormatter()
-        return formatter.string(fromByteCount: Int64(model.ownedSpaceBytes))
+        return formatter.string(fromByteCount: safeByteCount(model.ownedSpaceBytes))
     }
 
     private var netspaceText: String {
         guard let netspaceBytes = model.netspaceBytes else { return String(localized: "loading_placeholder") }
         let formatter = ChiaFormatters.bytesFormatter()
-        return formatter.string(fromByteCount: Int64(netspaceBytes))
+        return formatter.string(fromByteCount: safeByteCount(netspaceBytes))
     }
 
     private var ownedSpacePercentText: String {
@@ -316,6 +312,12 @@ struct ContentView: View {
 
     private func priceText(_ value: Double) -> String {
         ChiaFormatters.currencyUSD.string(from: NSNumber(value: value)) ?? "-"
+    }
+
+    private func safeByteCount(_ value: Double) -> Int64 {
+        if value.isNaN || value.isInfinite { return 0 }
+        let clamped = min(value, Double(Int64.max))
+        return Int64(clamped)
     }
 
     private func spinOnce() {
