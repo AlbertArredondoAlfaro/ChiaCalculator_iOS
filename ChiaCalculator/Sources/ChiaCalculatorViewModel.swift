@@ -1,11 +1,13 @@
 import Foundation
 import Observation
+import Network
 
 @Observable
 final class ChiaCalculatorViewModel {
     var plotCount: Int = 10 {
         didSet {
             if plotCount < 1 { plotCount = 1 }
+            if plotCount > maxPlots { plotCount = maxPlots }
         }
     }
     var selectedKSize: KSize = .k32
@@ -18,12 +20,34 @@ final class ChiaCalculatorViewModel {
     private(set) var netspaceBytes: Double?
     private(set) var xchPriceUSD: Double?
     private(set) var peakHeight: Int?
+    private(set) var isNetworkAvailable: Bool = true
 
     // Constants
     let blocksPerDay: Double = 4608
-    private let baseReward: Double = 2.0
+    private static let baseReward: Double = 2.0
 
     private let statsURL = URL(string: "https://spacefarmers.io/api/pool/stats")!
+    private let monitor = NWPathMonitor()
+    private let monitorQueue = DispatchQueue(label: "ChiaCalculator.NetworkMonitor")
+
+    init() {
+        monitor.pathUpdateHandler = { [weak self] path in
+            guard let self else { return }
+            let available = path.status == .satisfied
+            Task { @MainActor in
+                self.isNetworkAvailable = available
+                if available, self.errorMessage != nil || self.lastUpdated == nil {
+                    await self.refresh(showSpinner: false)
+                }
+            }
+        }
+        monitor.start(queue: monitorQueue)
+    }
+
+    deinit {
+        monitor.cancel()
+    }
+    let maxPlots: Int = 10_000_000
 
     @MainActor
     func loadIfNeeded() async {
@@ -91,7 +115,7 @@ final class ChiaCalculatorViewModel {
 
     var rewardPerBlock: Double? {
         guard let height = peakHeight else { return nil }
-        return rewardForHeight(height)
+        return Self.rewardForHeight(height)
     }
 
     var expectedTimeToWinDays: Double? {
@@ -134,7 +158,7 @@ final class ChiaCalculatorViewModel {
         PlotSizeTable.sizeGiB(for: selectedKSize, compression: selectedCompression)
     }
 
-    private func rewardForHeight(_ height: Int) -> Double {
+    static func rewardForHeight(_ height: Int) -> Double {
         let firstHalving = 5_045_760
         let secondHalving = 10_091_520
         let thirdHalving = 15_137_280

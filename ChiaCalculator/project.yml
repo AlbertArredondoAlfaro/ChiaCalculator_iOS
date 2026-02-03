@@ -28,21 +28,29 @@ targets:
     type: application
     platform: iOS
     sources:
-      - path: .
-        name: ChiaCalculator
-        excludes:
-          - project.yml
-          - Resources
-    resources:
-      - path: en.lproj/Localizable.strings
-      - path: es.lproj/Localizable.strings
-      - path: ca.lproj/Localizable.strings
-      - path: fr.lproj/Localizable.strings
-      - path: de.lproj/Localizable.strings
+      - path: Sources
+        name: Sources
+      - path: Localization
+        name: Localization
+        buildPhase: resources
       - path: Assets.xcassets
         name: Assets
+        buildPhase: resources
     settings:
       base:
         MARKETING_VERSION: 1.0
         CURRENT_PROJECT_VERSION: 1
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+  ChiaCalculatorTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+        name: Tests
+    dependencies:
+      - target: ChiaCalculator
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: $(BUILT_PRODUCTS_DIR)/ChiaCalculator.app/ChiaCalculator
+        SWIFT_VERSION: 5.10

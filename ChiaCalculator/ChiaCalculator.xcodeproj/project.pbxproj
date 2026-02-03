@@ -3,90 +3,131 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 63;
+	objectVersion = 77;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08D429328112AD078993E0A2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */; };
-		10AF62D5BE7E05ED7E66928A /* ChiaCalculator.xcodeproj in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */; };
-		213C355914DD36FC985EF50A /* ChiaCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */; };
-		2A7D37B560017A4533422FFD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */; };
-		4419D37D3FC9D83BC0E3F697 /* ChiaFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */; };
-		536EB786F7713933ABFA5A64 /* PoolStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */; };
-		57F12953711FA6D1BD36F423 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */; };
-		8B5E9C0161E9895A0A030B4F /* ChiaCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = "TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */; };
-		92868E09A1840BC5B5A6CA1D /* DerivedResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B7E64389C8D2089CB5424D /* DerivedResponses.swift */; };
-		C65D74E12873B8ABAE25075A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = "TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */; };
+		12E00C494CA73377817EAD83 /* ChiaFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC269ABA778917FB3996A8 /* ChiaFormatters.swift */; };
+		1413C5F7A24BE414456BCB3C /* ChiaCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21001A8B479A71C954CD82E4 /* ChiaCalculatorApp.swift */; };
+		16D54AC2F54AE80412CE9F5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27CF4A4CA2538EE7627D106A /* Localizable.strings */; };
+		84470320D1444E67645BB7B3 /* ChiaCalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F27D5527881DC020D3BD256 /* ChiaCalculatorViewModel.swift */; };
+		BF88932D764B865DB6D99BFE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0344FC9739383AC99ADFE7DA /* ContentView.swift */; };
+		C7FE5FF4D29539EF1447327D /* ChiaCalculatorViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13EE146CF1368B62DC2290 /* ChiaCalculatorViewModelTests.swift */; };
+		C8813DB0ABE84DCE1828BB97 /* DerivedResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56FBE694FB580097CA57EC4 /* DerivedResponses.swift */; };
+		CB924FD683C7A903D6337890 /* PoolStatsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667316E094BB5DDAD32006C3 /* PoolStatsResponse.swift */; };
+		D82CC8E3304AB757C58231A1 /* Assets in Resources */ = {isa = PBXBuildFile; fileRef = C59BAAB5DA343361145C9275 /* Assets */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E41FD134F9C2498D43DDF24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5F9C98BC058D6C35CE9C2829 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9F9E256E313E405936D80A8;
+			remoteInfo = ChiaCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		42B7E64389C8D2089CB5424D /* DerivedResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivedResponses.swift; sourceTree = "<group>"; };
+		0344FC9739383AC99ADFE7DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		21001A8B479A71C954CD82E4 /* ChiaCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorApp.swift; sourceTree = "<group>"; };
+		41BC269ABA778917FB3996A8 /* ChiaFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaFormatters.swift; sourceTree = "<group>"; };
+		4C898E84A883869F763C40F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5F918BAF6674A25024D61CD5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		667316E094BB5DDAD32006C3 /* PoolStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolStatsResponse.swift; sourceTree = "<group>"; };
+		6B1745BDB80830CD5B1FBF4C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7DE067B83D3836070FF756A3 /* ChiaCalculator.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ChiaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolStatsResponse.swift; sourceTree = "<group>"; };
-		"TEMP_292DDE94-B02B-41CD-B46A-47F2AA0312DD" /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		"TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		"TEMP_4CAAC7EC-FB41-4D21-BBEB-68B77C4FAFEC" /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
-		"TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ChiaCalculator.xcodeproj; sourceTree = "<group>"; };
-		"TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaFormatters.swift; sourceTree = "<group>"; };
-		"TEMP_847627CA-E46E-417D-A7AF-7EFBA84C66D2" /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		"TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		"TEMP_94639ADE-ED20-4938-B515-0977B9E360BB" /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		"TEMP_AC4A28D4-795C-4669-9CF9-3EE6EB99A87F" /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
-		"TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		"TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorApp.swift; sourceTree = "<group>"; };
-		"TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModel.swift; sourceTree = "<group>"; };
+		8D13EE146CF1368B62DC2290 /* ChiaCalculatorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModelTests.swift; sourceTree = "<group>"; };
+		91F7E7F558D52842FE19A649 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
+		9F27D5527881DC020D3BD256 /* ChiaCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModel.swift; sourceTree = "<group>"; };
+		A59D347AA8448079932125D5 /* ChiaCalculatorTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = ChiaCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56FBE694FB580097CA57EC4 /* DerivedResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DerivedResponses.swift; sourceTree = "<group>"; };
+		C59BAAB5DA343361145C9275 /* Assets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF5AAC25BA7350C050B64F66 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		07038A532F315B5700E127E2 /* Recovered References */ = {
+		2D299FD1DD2A3985384F54C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				"TEMP_E03E1EB1-0CB8-4177-A29A-EF07A8EC5F11" /* ChiaCalculatorApp.swift */,
-				"TEMP_FB548FED-6539-4108-86D3-CB3F3ADC6C2F" /* ChiaCalculatorViewModel.swift */,
-				"TEMP_70B6EC5A-4A39-4F1E-85D0-7AFF007F7B50" /* ChiaFormatters.swift */,
-				"TEMP_DA68CDB9-B15D-4E41-9F4D-697179AB1517" /* ContentView.swift */,
-				"TEMP_31D88276-B775-463A-8F5D-AA65D951C5AF" /* Assets.xcassets */,
-				"TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */,
-				"TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */,
-				"TEMP_87A52955-3991-4749-8C47-DD552107A69D" /* README.md */,
+				B56FBE694FB580097CA57EC4 /* DerivedResponses.swift */,
+				667316E094BB5DDAD32006C3 /* PoolStatsResponse.swift */,
 			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		07038A542F315B5700E127E2 /* Products */ = {
-			isa = PBXGroup;
-			name = Products;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		3C57DC1DC3442DB281692457 = {
 			isa = PBXGroup;
 			children = (
-				9C39837F063D4E7753285176 /* Models */,
+				C59BAAB5DA343361145C9275 /* Assets */,
+				546C34A04584AD72A5382F67 /* Localization */,
+				B89E8D6C9D9B97B20B0A85C0 /* Sources */,
+				C88021CBA9C00F3C26158527 /* Tests */,
 				6A8DF811FE4CC4BC8B9B7499 /* Products */,
-				07038A532F315B5700E127E2 /* Recovered References */,
 			);
+			sourceTree = "<group>";
+		};
+		546C34A04584AD72A5382F67 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				27CF4A4CA2538EE7627D106A /* Localizable.strings */,
+			);
+			name = Localization;
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		6A8DF811FE4CC4BC8B9B7499 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				7DE067B83D3836070FF756A3 /* ChiaCalculator.app */,
+				A59D347AA8448079932125D5 /* ChiaCalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C39837F063D4E7753285176 /* Models */ = {
+		B89E8D6C9D9B97B20B0A85C0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				42B7E64389C8D2089CB5424D /* DerivedResponses.swift */,
-				DCE556C577C3D7878E3B8933 /* PoolStatsResponse.swift */,
+				21001A8B479A71C954CD82E4 /* ChiaCalculatorApp.swift */,
+				9F27D5527881DC020D3BD256 /* ChiaCalculatorViewModel.swift */,
+				41BC269ABA778917FB3996A8 /* ChiaFormatters.swift */,
+				0344FC9739383AC99ADFE7DA /* ContentView.swift */,
+				2D299FD1DD2A3985384F54C9 /* Models */,
 			);
-			path = Models;
+			name = Sources;
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C88021CBA9C00F3C26158527 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8D13EE146CF1368B62DC2290 /* ChiaCalculatorViewModelTests.swift */,
+			);
+			name = Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		08CD7FACE1155B76A3E3908D /* ChiaCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B64E30BFE0A8EF2D22DC93F /* Build configuration list for PBXNativeTarget "ChiaCalculatorTests" */;
+			buildPhases = (
+				80EC3305C95E1759148A3B1D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92C1CA9D6F2F0FF0398F1476 /* PBXTargetDependency */,
+			);
+			name = ChiaCalculatorTests;
+			packageProductDependencies = (
+			);
+			productName = ChiaCalculatorTests;
+			productReference = A59D347AA8448079932125D5 /* ChiaCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A9F9E256E313E405936D80A8 /* ChiaCalculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B3A4D7420BCBFCF99D4B7182 /* Build configuration list for PBXNativeTarget "ChiaCalculator" */;
@@ -114,6 +155,10 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					08CD7FACE1155B76A3E3908D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
 					A9F9E256E313E405936D80A8 = {
 						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
@@ -134,16 +179,12 @@
 			);
 			mainGroup = 3C57DC1DC3442DB281692457;
 			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 07038A542F315B5700E127E2 /* Products */;
-					ProjectRef = "TEMP_548CE804-52AE-41CA-91F4-6D5ECBD9B01E" /* ChiaCalculator.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A9F9E256E313E405936D80A8 /* ChiaCalculator */,
+				08CD7FACE1155B76A3E3908D /* ChiaCalculatorTests */,
 			);
 		};
 /* End PBXProject section */
@@ -153,10 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C65D74E12873B8ABAE25075A /* Assets.xcassets in Resources */,
-				10AF62D5BE7E05ED7E66928A /* ChiaCalculator.xcodeproj in Resources */,
-				08D429328112AD078993E0A2 /* Localizable.strings in Resources */,
-				57F12953711FA6D1BD36F423 /* README.md in Resources */,
+				D82CC8E3304AB757C58231A1 /* Assets in Resources */,
+				16D54AC2F54AE80412CE9F5F /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,26 +206,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				213C355914DD36FC985EF50A /* ChiaCalculatorApp.swift in Sources */,
-				8B5E9C0161E9895A0A030B4F /* ChiaCalculatorViewModel.swift in Sources */,
-				4419D37D3FC9D83BC0E3F697 /* ChiaFormatters.swift in Sources */,
-				2A7D37B560017A4533422FFD /* ContentView.swift in Sources */,
-				92868E09A1840BC5B5A6CA1D /* DerivedResponses.swift in Sources */,
-				536EB786F7713933ABFA5A64 /* PoolStatsResponse.swift in Sources */,
+				1413C5F7A24BE414456BCB3C /* ChiaCalculatorApp.swift in Sources */,
+				84470320D1444E67645BB7B3 /* ChiaCalculatorViewModel.swift in Sources */,
+				12E00C494CA73377817EAD83 /* ChiaFormatters.swift in Sources */,
+				BF88932D764B865DB6D99BFE /* ContentView.swift in Sources */,
+				C8813DB0ABE84DCE1828BB97 /* DerivedResponses.swift in Sources */,
+				CB924FD683C7A903D6337890 /* PoolStatsResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80EC3305C95E1759148A3B1D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7FE5FF4D29539EF1447327D /* ChiaCalculatorViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		92C1CA9D6F2F0FF0398F1476 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9F9E256E313E405936D80A8 /* ChiaCalculator */;
+			targetProxy = E41FD134F9C2498D43DDF24E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
-		"TEMP_AA022B3D-7FF6-4ADB-83BF-7C27B182C430" /* Localizable.strings */ = {
+		27CF4A4CA2538EE7627D106A /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				"TEMP_4CAAC7EC-FB41-4D21-BBEB-68B77C4FAFEC" /* de */,
-				"TEMP_847627CA-E46E-417D-A7AF-7EFBA84C66D2" /* en */,
-				"TEMP_292DDE94-B02B-41CD-B46A-47F2AA0312DD" /* es */,
-				"TEMP_94639ADE-ED20-4938-B515-0977B9E360BB" /* fr */,
-				"TEMP_AC4A28D4-795C-4669-9CF9-3EE6EB99A87F" /* ca */,
+				91F7E7F558D52842FE19A649 /* ca */,
+				EF5AAC25BA7350C050B64F66 /* de */,
+				4C898E84A883869F763C40F8 /* en */,
+				6B1745BDB80830CD5B1FBF4C /* es */,
+				5F918BAF6674A25024D61CD5 /* fr */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -347,6 +402,40 @@
 			};
 			name = Release;
 		};
+		95DE9927B44990221410B0A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiaCalculator.app/ChiaCalculator";
+			};
+			name = Debug;
+		};
+		B531CBE877F3EC4086C2C1D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChiaCalculator.app/ChiaCalculator";
+			};
+			name = Release;
+		};
 		D15183A8C5D0F6BAADCFCC15 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -366,6 +455,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2B64E30BFE0A8EF2D22DC93F /* Build configuration list for PBXNativeTarget "ChiaCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95DE9927B44990221410B0A7 /* Debug */,
+				B531CBE877F3EC4086C2C1D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		5B53DDAA141AD715AAFC3333 /* Build configuration list for PBXProject "ChiaCalculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
