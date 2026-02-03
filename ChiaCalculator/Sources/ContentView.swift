@@ -10,6 +10,7 @@ struct ContentView: View {
     @FocusState private var isPlotFieldFocused: Bool
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     var body: some View {
         @Bindable var model = model
@@ -24,6 +25,7 @@ struct ContentView: View {
                     resultsSection
                     lastUpdatedView
                 }
+                .frame(maxWidth: contentMaxWidth)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 32)
                 .opacity(hasAppeared ? 1 : 0)
@@ -323,6 +325,10 @@ struct ContentView: View {
     private func spinOnce() {
         guard !reduceMotion else { return }
         refreshSpinAngle += 360
+    }
+
+    private var contentMaxWidth: CGFloat? {
+        horizontalSizeClass == .regular ? 540 : nil
     }
 }
 
