@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 77;
+	objectVersion = 63;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,7 +36,7 @@
 		5F918BAF6674A25024D61CD5 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		667316E094BB5DDAD32006C3 /* PoolStatsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoolStatsResponse.swift; sourceTree = "<group>"; };
 		6B1745BDB80830CD5B1FBF4C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		7DE067B83D3836070FF756A3 /* ChiaCalculator.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = ChiaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DE067B83D3836070FF756A3 /* ChiaCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChiaCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D13EE146CF1368B62DC2290 /* ChiaCalculatorViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModelTests.swift; sourceTree = "<group>"; };
 		91F7E7F558D52842FE19A649 /* ca */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ca; path = ca.lproj/Localizable.strings; sourceTree = "<group>"; };
 		9F27D5527881DC020D3BD256 /* ChiaCalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorViewModel.swift; sourceTree = "<group>"; };
@@ -72,7 +72,6 @@
 			children = (
 				27CF4A4CA2538EE7627D106A /* Localizable.strings */,
 			);
-			name = Localization;
 			path = Localization;
 			sourceTree = "<group>";
 		};
@@ -94,7 +93,6 @@
 				0344FC9739383AC99ADFE7DA /* ContentView.swift */,
 				2D299FD1DD2A3985384F54C9 /* Models */,
 			);
-			name = Sources;
 			path = Sources;
 			sourceTree = "<group>";
 		};
@@ -103,7 +101,6 @@
 			children = (
 				8D13EE146CF1368B62DC2290 /* ChiaCalculatorViewModelTests.swift */,
 			);
-			name = Tests;
 			path = Tests;
 			sourceTree = "<group>";
 		};
@@ -160,7 +157,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					A9F9E256E313E405936D80A8 = {
-						DevelopmentTeam = "";
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -179,7 +175,6 @@
 			);
 			mainGroup = 3C57DC1DC3442DB281692457;
 			minimizedProjectReferenceProxies = 1;
-			preferredProjectObjectVersion = 77;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -392,6 +387,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4JALZNH8YW;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -442,6 +438,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4JALZNH8YW;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
