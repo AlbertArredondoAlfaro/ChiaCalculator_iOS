@@ -64,14 +64,26 @@ struct ContentView: View {
                     .shadow(color: .black.opacity(0.15), radius: 12, x: 0, y: 6)
             }
         }
-        .toolbar {
-            ToolbarItemGroup(placement: .keyboard) {
-                Spacer()
-                Button(String(localized: "keyboard_done")) {
-                    isPlotFieldFocused = false
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            if isPlotFieldFocused {
+                HStack {
+                    Spacer()
+                    Button(String(localized: "keyboard_done")) {
+                        isPlotFieldFocused = false
+                    }
+                    .font(.callout.weight(.semibold))
+                    .padding(.vertical, 8)
+                    .padding(.horizontal, 14)
+                    .foregroundStyle(Theme.accent)
+                    .background(.thinMaterial, in: Capsule())
                 }
+                .padding(.horizontal, 16)
+                .padding(.vertical, 10)
+                .background(.ultraThinMaterial)
+                .transition(.move(edge: .bottom).combined(with: .opacity))
             }
         }
+        .animation(reduceMotion ? .none : .easeOut(duration: 0.2), value: isPlotFieldFocused)
     }
 
     private var heroSection: some View {
@@ -90,15 +102,14 @@ struct ContentView: View {
                     .font(.system(size: 15, weight: .medium, design: .rounded))
                     .foregroundStyle(.secondary)
 
-                HStack(alignment: .bottom, spacing: 12) {
-                    HeroChip(title: String(localized: "owned_space_label"), value: ownedSpaceText)
+                HStack(alignment: .bottom, spacing: 14) {
+                    HeroChip(title: String(localized: "owned_space_label"), value: ownedSpaceText, iconName: "externaldrive.fill")
                         .frame(maxWidth: .infinity)
                         .layoutPriority(1)
-                    HeroChip(title: String(localized: "xch_price_label"), value: priceOrPlaceholder)
+                    HeroChip(title: String(localized: "xch_price_label"), value: priceOrPlaceholder, iconName: "dollarsign.circle.fill")
                         .frame(maxWidth: .infinity)
                         .layoutPriority(1)
                 }
-                .frame(height: 64)
                 .frame(maxWidth: .infinity)
             }
         }
@@ -111,7 +122,35 @@ struct ContentView: View {
             VStack(alignment: .leading, spacing: 16) {
                 SectionHeader(title: String(localized: "input_section_title"))
 
-                HStack(alignment: .center, spacing: 12) {
+                VStack(spacing: 12) {
+                    HStack(alignment: .center, spacing: 12) {
+                        TextField("10", value: $model.plotCount, format: .number)
+                            .textFieldStyle(.plain)
+                            .keyboardType(.numberPad)
+                            .multilineTextAlignment(.center)
+                            .padding(.vertical, 8)
+                            .padding(.horizontal, 10)
+                            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .strokeBorder(Color.white.opacity(0.18), lineWidth: 1)
+                            )
+                            .frame(maxWidth: .infinity)
+                            .tint(Theme.accent)
+                            .accessibilityLabel(String(localized: "plots_label"))
+                            .focused($isPlotFieldFocused)
+                            .onChange(of: model.plotCount) {
+                                guard !isSliderEditing, !plotUpdateFromSlider else { return }
+                                sliderValue = sliderPosition(for: model.plotCount)
+                            }
+
+                        StepperControl(
+                            onDecrease: { adjustPlots(by: -10) },
+                            onIncrease: { adjustPlots(by: 10) }
+                        )
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+
                     Slider(value: Binding(
                         get: { sliderValue },
                         set: { newValue in
@@ -124,25 +163,9 @@ struct ContentView: View {
                     })
                     .tint(Theme.accent)
                     .sensoryFeedback(.selection, trigger: model.plotCount)
-
-                    TextField("10", value: $model.plotCount, format: .number)
-                        .textFieldStyle(.roundedBorder)
-                        .keyboardType(.numberPad)
-                        .frame(width: 90)
-                        .accessibilityLabel(String(localized: "plots_label"))
-                        .focused($isPlotFieldFocused)
-                        .onChange(of: model.plotCount) {
-                            guard !isSliderEditing, !plotUpdateFromSlider else { return }
-                            sliderValue = sliderPosition(for: model.plotCount)
-                        }
-
-                    StepperControl(
-                        onDecrease: { adjustPlots(by: -10) },
-                        onIncrease: { adjustPlots(by: 10) }
-                    )
                 }
-                .padding(.vertical, 6)
-                .padding(.horizontal, 8)
+                .padding(.vertical, 8)
+                .padding(.horizontal, 10)
                 .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 16, style: .continuous))
                 .overlay(
                     RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -222,15 +245,13 @@ struct ContentView: View {
     private var lastUpdatedView: some View {
         Group {
             if let lastUpdated = model.lastUpdated {
-                Text(String(localized: "last_updated_label"))
-                    .font(.footnote)
-                    .foregroundStyle(.secondary)
-                    .overlay(alignment: .trailing) {
-                        Text(lastUpdated, style: .time)
-                            .font(.footnote.weight(.medium))
-                            .foregroundStyle(.secondary)
-                            .padding(.leading, 6)
-                    }
+                HStack(spacing: 6) {
+                    Text(String(localized: "last_updated_label"))
+                    Text(lastUpdated, style: .time)
+                        .fontWeight(.medium)
+                }
+                .font(.footnote)
+                .foregroundStyle(colorScheme == .dark ? Color.secondary : Color.black.opacity(0.75))
             }
         }
         .accessibilityLabel(String(localized: "last_updated_label"))
@@ -242,11 +263,11 @@ struct ContentView: View {
             spinOnce()
             Task { await model.refresh(showSpinner: false) }
         } label: {
-            Image(systemName: "arrow.clockwise")
-                .font(.system(size: 16, weight: .bold))
-                .modifier(RefreshSpin(isRefreshing: model.isRefreshing, reduceMotion: reduceMotion, manualAngle: refreshSpinAngle))
-                .padding(10)
-                .background(.thinMaterial, in: Circle())
+                Image(systemName: "arrow.clockwise")
+                    .font(.system(size: 16, weight: .bold))
+                    .modifier(RefreshSpin(reduceMotion: reduceMotion, manualAngle: refreshSpinAngle))
+                    .padding(10)
+                    .background(.thinMaterial, in: Circle())
         }
         .buttonStyle(ScaleButtonStyle())
         .accessibilityLabel(String(localized: "refresh_label"))
@@ -405,24 +426,59 @@ private struct MetricChip: View {
 private struct HeroChip: View {
     let title: String
     let value: String
+    var iconName: String? = nil
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .center, spacing: 6) {
+            if let iconName {
+                Image(systemName: iconName)
+                    .font(.system(size: 18, weight: .bold))
+                    .foregroundStyle(.white)
+                    .padding(8)
+                    .background(
+                        Circle()
+                            .fill(Theme.accent.opacity(0.28))
+                    )
+            }
             Text(title)
-                .font(.caption2.weight(.semibold))
+                .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .lineLimit(2)
+                .minimumScaleFactor(0.85)
             Text(value)
-                .font(.system(size: 18, weight: .semibold, design: .rounded))
+                .font(.system(size: 22, weight: .bold, design: .rounded))
                 .monospacedDigit()
                 .foregroundStyle(.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.85)
         }
-        .padding(.vertical, 8)
-        .padding(.horizontal, 10)
-        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-        .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
-                .strokeBorder(Color.white.opacity(0.12), lineWidth: 1)
+        .padding(.vertical, 12)
+        .padding(.horizontal, 12)
+        .frame(maxWidth: .infinity, minHeight: 84, alignment: .center)
+        .background(
+            ZStack {
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(.thinMaterial)
+                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                    .fill(
+                        LinearGradient(
+                            colors: [
+                                Theme.accent.opacity(0.22),
+                                Color.white.opacity(0.05)
+                            ],
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        )
+                    )
+            }
         )
+        .overlay(
+            RoundedRectangle(cornerRadius: 16, style: .continuous)
+                .strokeBorder(Color.white.opacity(0.18), lineWidth: 1)
+        )
+        .shadow(color: Theme.glow.opacity(0.2), radius: 12, x: 0, y: 6)
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -454,15 +510,6 @@ private struct StepperControl: View {
 
     var body: some View {
         HStack(spacing: 8) {
-            Button(action: onDecrease) {
-                Image(systemName: "minus")
-                    .font(.system(size: 14, weight: .bold))
-                    .frame(width: 30, height: 30)
-                    .background(.thinMaterial, in: Circle())
-            }
-            .buttonStyle(ScaleButtonStyle())
-            .accessibilityLabel(String(localized: "decrease_plots_label"))
-
             Button(action: onIncrease) {
                 Image(systemName: "plus")
                     .font(.system(size: 14, weight: .bold))
@@ -471,25 +518,27 @@ private struct StepperControl: View {
             }
             .buttonStyle(ScaleButtonStyle())
             .accessibilityLabel(String(localized: "increase_plots_label"))
+
+            Button(action: onDecrease) {
+                Image(systemName: "minus")
+                    .font(.system(size: 14, weight: .bold))
+                    .frame(width: 30, height: 30)
+                    .background(.thinMaterial, in: Circle())
+            }
+            .buttonStyle(ScaleButtonStyle())
+            .accessibilityLabel(String(localized: "decrease_plots_label"))
         }
     }
 }
 
 private struct RefreshSpin: ViewModifier {
-    let isRefreshing: Bool
     let reduceMotion: Bool
     let manualAngle: Double
     
     func body(content: Content) -> some View {
         content
-            .rotationEffect(.degrees((isRefreshing ? 360 : 0) + manualAngle))
-            .animation(
-                reduceMotion
-                ? .default
-                : (isRefreshing ? .linear(duration: 1).repeatForever(autoreverses: false) : .default),
-                value: isRefreshing
-            )
-            .animation(reduceMotion ? .default : .easeOut(duration: 0.5), value: manualAngle)
+            .rotationEffect(.degrees(manualAngle))
+            .animation(reduceMotion ? .default : .easeOut(duration: 0.6), value: manualAngle)
     }
 }
 
