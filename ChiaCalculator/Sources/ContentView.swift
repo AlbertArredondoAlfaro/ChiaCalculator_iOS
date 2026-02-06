@@ -140,7 +140,11 @@ struct ContentView: View {
                             .accessibilityLabel(String(localized: "plots_label"))
                             .focused($isPlotFieldFocused)
                             .onChange(of: model.plotCount) {
-                                guard !isSliderEditing, !plotUpdateFromSlider else { return }
+                                if plotUpdateFromSlider {
+                                    plotUpdateFromSlider = false
+                                    return
+                                }
+                                guard !isSliderEditing else { return }
                                 sliderValue = sliderPosition(for: model.plotCount)
                             }
 
