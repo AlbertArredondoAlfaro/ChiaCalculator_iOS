@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07FDB5B82F35143B00EEB618 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07FDB5B72F35143B00EEB618 /* Launch Screen.storyboard */; };
 		12E00C494CA73377817EAD83 /* ChiaFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BC269ABA778917FB3996A8 /* ChiaFormatters.swift */; };
 		1413C5F7A24BE414456BCB3C /* ChiaCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21001A8B479A71C954CD82E4 /* ChiaCalculatorApp.swift */; };
 		16D54AC2F54AE80412CE9F5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27CF4A4CA2538EE7627D106A /* Localizable.strings */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		0344FC9739383AC99ADFE7DA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		07FDB5B72F35143B00EEB618 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		21001A8B479A71C954CD82E4 /* ChiaCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaCalculatorApp.swift; sourceTree = "<group>"; };
 		41BC269ABA778917FB3996A8 /* ChiaFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChiaFormatters.swift; sourceTree = "<group>"; };
 		4C898E84A883869F763C40F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 		3C57DC1DC3442DB281692457 = {
 			isa = PBXGroup;
 			children = (
+				07FDB5B72F35143B00EEB618 /* Launch Screen.storyboard */,
 				C59BAAB5DA343361145C9275 /* Assets */,
 				546C34A04584AD72A5382F67 /* Localization */,
 				B89E8D6C9D9B97B20B0A85C0 /* Sources */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07FDB5B82F35143B00EEB618 /* Launch Screen.storyboard in Resources */,
 				D82CC8E3304AB757C58231A1 /* Assets in Resources */,
 				16D54AC2F54AE80412CE9F5F /* Localizable.strings in Resources */,
 			);
@@ -390,9 +394,9 @@
 				DEVELOPMENT_TEAM = 4JALZNH8YW;
 				INFOPLIST_KEY_CFBundleDisplayName = "Chia Calculator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,9 +452,9 @@
 				DEVELOPMENT_TEAM = 4JALZNH8YW;
 				INFOPLIST_KEY_CFBundleDisplayName = "Chia Calculator";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UILaunchScreen_Generation = NO;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
